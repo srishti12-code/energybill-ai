@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 import openpyxl
 from PIL import Image
 
@@ -13,10 +14,13 @@ if uploaded_file:
 
     image = Image.open(uploaded_file)
 
-    st.image(image, caption="Uploaded Bill", use_container_width=True)
+    st.image(
+        image,
+        caption="Uploaded Bill",
+        use_container_width=True
+    )
 
-    image.save("bill.jpg")
-    extracted_text="Bill text Extraction disable"
+    extracted_text = "Bill uploaded successfully"
 
     st.subheader("Extracted Text")
     st.write(extracted_text)
