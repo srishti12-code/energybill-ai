@@ -1,5 +1,4 @@
 import streamlit as st
-import easyocr
 import openpyxl
 from PIL import Image
 
@@ -17,12 +16,7 @@ if uploaded_file:
     st.image(image, caption="Uploaded Bill", use_container_width=True)
 
     image.save("bill.jpg")
-
-    reader = easyocr.Reader(['en'])
-
-    results = reader.readtext("bill.jpg", detail=0)
-
-    extracted_text = " ".join(results)
+    extracted_text="Bill text Extraction disable"
 
     st.subheader("Extracted Text")
     st.write(extracted_text)
