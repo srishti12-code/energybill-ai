@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/15WW_khZVI6gKMGiVuLmvAYaZRqf_UR2N
 """
 
-!pip install streamlit pyngrok easyocr openpyxl pillow
-
 # Commented out IPython magic to ensure Python compatibility.
 # %%writefile app.py
 # 
